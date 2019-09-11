@@ -9,7 +9,6 @@ we're gonna go ahead and say that anyway.
 
 These examples have been constructed with the following requirements:
 
-=======
 | Supported OS | Product Role | State |
 |--------------------------|---------------------|-----|
 | CentOS 7 | example\_role::fastb::web\_be | Complete |
