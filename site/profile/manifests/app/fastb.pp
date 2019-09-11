@@ -19,9 +19,13 @@ class profile::app::fastb (
   $mysql_passwd = lookup( "profile::app::fastb::fastb_db_password::${trusted['extensions']['pp_preshared_key']}", String,
     'first', 'somesillystringfortestdata')
 
-
-  @@mysql_user { "fastb_db_user@${facts['fqdn']}":
-    ensure        => present,
-    password_hash => mysql_password($mysql_passwd)
+  @@mysql::db { "fastb_db_${facts['fqdn']}":
+    user     => 'fastb_db_user',
+    password => $mysql_passwd,
+    dbname   => 'fastb_db',
+    host     => $facts['fqdn'],
+    grant    => [ 'SELECT', 'UPDATE' ],
+    tag      => $trusted['extensions']['pp_preshared_key'],
   }
 }
+

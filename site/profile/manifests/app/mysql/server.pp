@@ -17,9 +17,17 @@ class profile::app::mysql::server (
   } )
   assert_type(Hash[String, Any], $lookup_settings)
 
-  $tag_for_exported_mysql_users = $trusted['extensions']['pp_preshared_key']
+  $network_option_hash = {
+    'override_options' => {
+      'mysqld' => {
+        'bind-address' => $facts['networking']['ip'],
+      }
+    }
+  }
+  $merged_settings = deep_merge($network_option_hash, $lookup_settings)
+  $tag_for_exported_mysql_db = $trusted['extensions']['pp_preshared_key']
 
-  assert_type(String, $tag_for_exported_mysql_users)
+  assert_type(String, $tag_for_exported_mysql_db)
 
   # This will ensure the root_password is of Sensitive datatype to protect the 
   # root_password from showing up in the logs.  
@@ -33,7 +41,7 @@ class profile::app::mysql::server (
 
   class {  'mysql::server':
     root_password => $secure_root_pass,
-      *           => $lookup_settings,
+      *           => $merged_settings,
   }
   contain mysql::server
 
@@ -41,12 +49,6 @@ class profile::app::mysql::server (
     contain "mysql::bindings::${binding}"
   }
 
-  Mysql_user <<| tag == $tag_for_exported_mysql_users |>>
-
-  $dbs.each |$dbname, $opts| {
-    mysql::db { $dbname:
-      * => $opts,
-    }
-  }
+  Mysql::Db <<| tag == $tag_for_exported_mysql_db |>>
 
 }
