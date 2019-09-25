@@ -1,0 +1,126 @@
+require 'spec_helper'
+ 
+<% test.classes.each do |cls| -%>
+describe "<%= cls.name %>" do
+ 
+<% test.nodes.each do |node| -%>
+  context "using fact set <%= node.name %>" do
+    node_facts = <%= node.fact_set %>
+    let(:facts) { node_facts }
+<% if node.trusted_set -%>
+    trusted_facts = <%= node.trusted_set %>
+    trusted_app = { "app"=>"<%= cls.name.split("::")[-1] %>"}
+    let(:trusted_facts) { trusted_facts.merge(trusted_app) }
+<% else -%>
+    trusted_facts = { "app"=>"<%= cls.name.split("::")[-1] %>"}
+    let(:trusted_facts) { trusted_facts }
+<% end -%>
+<% if @before_conditions -%>
+    before :each do
+<% @before_conditions.each do |function| -%>
+      <%= function %>
+<% end -%>
+    end
+<% end -%>
+ 
+<% if @mock_functions -%>
+ 
+    # Create a from_json function so that we can parse the output of json for mocked functions
+    before :each do
+      Puppet::Parser::Functions.newfunction(:from_json, :type => :rvalue) { |args|
+          require 'multi_json'
+          MultiJson.load(args[0])
+          puts <%= test.test_config %>
+        }
+    end
+<% end -%>
+ 
+    # This will component module eyaml entries in module hiera.yaml files.
+    # This is not enabled by default but if you have eyaml in component modules
+    #  you will need to uncomment the 'clean_hiera_eyaml' on line 83
+    def clean_hiera_eyaml
+      require 'tempfile'
+      # look at all hiera below .onceover/etc directory
+      Dir.glob('<%= Dir.pwd + '/.onceover' %>/**/hiera.yaml').each do |filename|
+     
+        Tempfile.open(".#{File.basename(filename)}", File.dirname(filename)) do |tempfile|
+          text = File.read(filename)
+          # Look for this pattern
+          #     lookup_key: eyaml_lookup_key
+          #       options:
+          #           pkcs7_private_key: *
+          #           pkcs7_public_key: *
+          tempfile.puts text.gsub(%r{\s*lookup_key:\s*eyaml_lookup_key\s*\n\s*options:\s*\n\s*pkcs7\w+:.*\n\s*pkcs7\w+:.*}, "")
+     
+          tempfile.close
+          FileUtils.mv tempfile.path, filename
+        end
+      end
+    end
+ 
+ 
+    Puppet::Functions.create_function(:eyaml_lookup_key) do
+ 
+      dispatch :eyaml_lookup_key do
+        param 'String[1]', :key
+        param 'Hash[String[1],Any]', :options
+        param 'Puppet::LookupContext', :context
+      end
+ 
+      def eyaml_lookup_key(key, options, context)
+        return 'stuff'
+      end
+    end
+ 
+    before :each do
+      # Curtrently there is some code within Puppet that will try to execute
+      # commands when compiling a catalog even though it shouldn't. One example is
+      # the groups attribute of the user resource on AIX. If we are running on
+      # Windows but pretending to be UNIX this will definitely fail so we need to
+      # mock it (or vice versa)
+      # Details:
+      # https://github.com/puppetlabs/puppet/blob/master/lib/puppet/util/execution.rb#L191
+      #clean_hiera_eyaml
+      expected_null_file = Puppet::Util::Platform.windows? ? 'NUL' : '/dev/null'
+      unless File.exist? expected_null_file
+        Puppet::Util::Execution.stubs(:execute).raises(Puppet::ExecutionFailure.new("Onceover caused this"))
+      end
+    end
+ 
+<% if @after_conditions -%>
+    after :each do
+<% @after_conditions.each do |function| -%>
+      <%= function %>
+<% end -%>
+    end
+<% end -%>
+    let(:pre_condition) {
+      pp = <%= '<<' %>-'END'
+$onceover_class = '<%= cls.name %>'
+$onceover_node  = '<%= node.name %>'
+ 
+# Begin user-specified pre_condition
+<%= (pre_condition || "").chomp %>
+# End user-specified pre_condition
+ 
+<% if @mock_functions -%>
+<% require 'multi_json' -%>
+# Mocking functions
+<% @mock_functions.each do |function,params| -%>
+<% if params['returns'].is_a? String -%>
+<%   json = params['returns'].dump[1..-2].to_json -%>
+<% else -%>
+<%   json = params['returns'].to_json -%>
+<% end -%>
+function <%= function %> (*$args) { from_json('<%= json %>') }
+<% end -%>
+<% end -%>
+ 
+END
+    }
+    it { should compile }
+  end
+<% end -%>
+end
+ 
+<% end -%>

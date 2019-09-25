@@ -1,0 +1,969 @@
+{
+  "name": "wadcdodrt02.domain.com",
+  "trusted": {
+    "env": "dev",
+    "hostname": "whatever.domain.com",
+    "pp_role": "agent",
+    "pp_service": "puppet",
+    "pp_product": "puppet",
+    "pp_preshared_key": "somekey"
+  },
+  "values": {
+    "_puppet_inventory_1": {
+      "packages": [
+        [
+          "Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219",
+          "10.0.40219",
+          "windows"
+        ],
+        [
+          "7-Zip 18.06 (x64 edition)",
+          "18.06.00.0",
+          "windows"
+        ],
+        [
+          "McAfee Agent",
+          "5.0.5.658",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2017 x64 Additional Runtime - 14.12.25810",
+          "14.12.25810",
+          "windows"
+        ],
+        [
+          "Puppet Agent (64-bit)",
+          "6.0.4",
+          "windows"
+        ],
+        [
+          "BMC BladeLogic Server Automation RSCD Agent",
+          "8.9.01.68",
+          "windows"
+        ],
+        [
+          "Microsoft Monitoring Agent",
+          "7.1.10184.0",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2017 x64 Minimum Runtime - 14.12.25810",
+          "14.12.25810",
+          "windows"
+        ],
+        [
+          "McAfee Host Intrusion Prevention",
+          "8.00.0900",
+          "windows"
+        ],
+        [
+          "McAfee Host Intrusion Prevention",
+          "8.00.0900",
+          "windows"
+        ],
+        [
+          "VMware Tools",
+          "10.3.5.10430147",
+          "windows"
+        ],
+        [
+          "Carbon Black Sensor",
+          "6.1.9.81012",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2017 Redistributable (x86) - 14.12.25810",
+          "14.12.25810.0",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2017 x86 Additional Runtime - 14.12.25810",
+          "14.12.25810",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2017 x86 Minimum Runtime - 14.12.25810",
+          "14.12.25810",
+          "windows"
+        ],
+        [
+          "IBM BigFix Client",
+          "9.5.11.191",
+          "windows"
+        ],
+        [
+          "McAfee VirusScan Enterprise",
+          "8.8.011000",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2017 Redistributable (x64) - 14.12.25810",
+          "14.12.25810.0",
+          "windows"
+        ],
+        [
+          "Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219",
+          "10.0.40219",
+          "windows"
+        ],
+        [
+          "7zip",
+          "18.06",
+          "chocolatey"
+        ],
+        [
+          "bginfo",
+          "4.26",
+          "chocolatey"
+        ],
+        [
+          "boot_options",
+          "1.0",
+          "chocolatey"
+        ],
+        [
+          "carbon-black",
+          "6.1.9",
+          "chocolatey"
+        ],
+        [
+          "chocolatey",
+          "0.10.8",
+          "chocolatey"
+        ],
+        [
+          "file_drop_prod",
+          "1.0",
+          "chocolatey"
+        ],
+        [
+          "ibm-bigfix-client",
+          "9.5.11.191",
+          "chocolatey"
+        ],
+        [
+          "mcafee-agent",
+          "5.0.5.658",
+          "chocolatey"
+        ],
+        [
+          "registerdns",
+          "1.0",
+          "chocolatey"
+        ],
+        [
+          "user_pinned_shortcuts",
+          "1.0",
+          "chocolatey"
+        ],
+        [
+          "bigdecimal",
+          "1.3.4",
+          "gem"
+        ],
+        [
+          "cmath",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "csv",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "date",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "dbm",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "deep_merge",
+          "1.0.1",
+          "gem"
+        ],
+        [
+          "did_you_mean",
+          "1.2.0",
+          "gem"
+        ],
+        [
+          "etc",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "facter",
+          "3.12.1",
+          "gem"
+        ],
+        [
+          "fast_gettext",
+          "1.1.2",
+          "gem"
+        ],
+        [
+          "fcntl",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "ffi",
+          "1.9.25",
+          "gem"
+        ],
+        [
+          "fiddle",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "fileutils",
+          "1.0.2",
+          "gem"
+        ],
+        [
+          "gdbm",
+          "2.0.0",
+          "gem"
+        ],
+        [
+          "gettext",
+          "3.2.2",
+          "gem"
+        ],
+        [
+          "hiera-eyaml",
+          "2.1.0",
+          "gem"
+        ],
+        [
+          "highline",
+          "1.6.21",
+          "gem"
+        ],
+        [
+          "hocon",
+          "1.2.5",
+          "gem"
+        ],
+        [
+          "httpclient",
+          "2.8.3",
+          "gem"
+        ],
+        [
+          "io-console",
+          "0.4.6",
+          "gem"
+        ],
+        [
+          "ipaddr",
+          "1.2.0",
+          "gem"
+        ],
+        [
+          "json",
+          "2.1.0",
+          "gem"
+        ],
+        [
+          "locale",
+          "2.1.2",
+          "gem"
+        ],
+        [
+          "minitar",
+          "0.6.1",
+          "gem"
+        ],
+        [
+          "minitest",
+          "5.10.3",
+          "gem"
+        ],
+        [
+          "multi_json",
+          "1.13.1",
+          "gem"
+        ],
+        [
+          "net-ssh",
+          "4.2.0",
+          "gem"
+        ],
+        [
+          "net-telnet",
+          "0.1.1",
+          "gem"
+        ],
+        [
+          "openssl",
+          "2.1.0",
+          "gem"
+        ],
+        [
+          "power_assert",
+          "1.1.1",
+          "gem"
+        ],
+        [
+          "psych",
+          "3.0.2",
+          "gem"
+        ],
+        [
+          "puppet",
+          "6.0.4",
+          "gem"
+        ],
+        [
+          "puppet-resource_api",
+          "1.6.2",
+          "gem"
+        ],
+        [
+          "rake",
+          "12.3.0",
+          "gem"
+        ],
+        [
+          "rdoc",
+          "6.0.1",
+          "gem"
+        ],
+        [
+          "scanf",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "sdbm",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "semantic_puppet",
+          "1.0.2",
+          "gem"
+        ],
+        [
+          "stringio",
+          "0.0.1",
+          "gem"
+        ],
+        [
+          "strscan",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "test-unit",
+          "3.2.7",
+          "gem"
+        ],
+        [
+          "text",
+          "1.3.1",
+          "gem"
+        ],
+        [
+          "trollop",
+          "2.1.2",
+          "gem"
+        ],
+        [
+          "webrick",
+          "1.4.2",
+          "gem"
+        ],
+        [
+          "win32-dir",
+          "0.4.9",
+          "gem"
+        ],
+        [
+          "win32-eventlog",
+          "0.6.2",
+          "gem"
+        ],
+        [
+          "win32-process",
+          "0.7.5",
+          "gem"
+        ],
+        [
+          "win32-security",
+          "0.2.5",
+          "gem"
+        ],
+        [
+          "win32-service",
+          "0.8.8",
+          "gem"
+        ],
+        [
+          "xmlrpc",
+          "0.3.0",
+          "gem"
+        ],
+        [
+          "zlib",
+          "1.0.0",
+          "gem"
+        ],
+        [
+          "bigdecimal",
+          "1.3.4",
+          "puppet_gem"
+        ],
+        [
+          "cmath",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "csv",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "date",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "dbm",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "deep_merge",
+          "1.0.1",
+          "puppet_gem"
+        ],
+        [
+          "did_you_mean",
+          "1.2.0",
+          "puppet_gem"
+        ],
+        [
+          "etc",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "facter",
+          "3.12.1",
+          "puppet_gem"
+        ],
+        [
+          "fast_gettext",
+          "1.1.2",
+          "puppet_gem"
+        ],
+        [
+          "fcntl",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "ffi",
+          "1.9.25",
+          "puppet_gem"
+        ],
+        [
+          "fiddle",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "fileutils",
+          "1.0.2",
+          "puppet_gem"
+        ],
+        [
+          "gdbm",
+          "2.0.0",
+          "puppet_gem"
+        ],
+        [
+          "gettext",
+          "3.2.2",
+          "puppet_gem"
+        ],
+        [
+          "hiera-eyaml",
+          "2.1.0",
+          "puppet_gem"
+        ],
+        [
+          "highline",
+          "1.6.21",
+          "puppet_gem"
+        ],
+        [
+          "hocon",
+          "1.2.5",
+          "puppet_gem"
+        ],
+        [
+          "httpclient",
+          "2.8.3",
+          "puppet_gem"
+        ],
+        [
+          "io-console",
+          "0.4.6",
+          "puppet_gem"
+        ],
+        [
+          "ipaddr",
+          "1.2.0",
+          "puppet_gem"
+        ],
+        [
+          "json",
+          "2.1.0",
+          "puppet_gem"
+        ],
+        [
+          "locale",
+          "2.1.2",
+          "puppet_gem"
+        ],
+        [
+          "minitar",
+          "0.6.1",
+          "puppet_gem"
+        ],
+        [
+          "minitest",
+          "5.10.3",
+          "puppet_gem"
+        ],
+        [
+          "multi_json",
+          "1.13.1",
+          "puppet_gem"
+        ],
+        [
+          "net-ssh",
+          "4.2.0",
+          "puppet_gem"
+        ],
+        [
+          "net-telnet",
+          "0.1.1",
+          "puppet_gem"
+        ],
+        [
+          "openssl",
+          "2.1.0",
+          "puppet_gem"
+        ],
+        [
+          "power_assert",
+          "1.1.1",
+          "puppet_gem"
+        ],
+        [
+          "psych",
+          "3.0.2",
+          "puppet_gem"
+        ],
+        [
+          "puppet",
+          "6.0.4",
+          "puppet_gem"
+        ],
+        [
+          "puppet-resource_api",
+          "1.6.2",
+          "puppet_gem"
+        ],
+        [
+          "rake",
+          "12.3.0",
+          "puppet_gem"
+        ],
+        [
+          "rdoc",
+          "6.0.1",
+          "puppet_gem"
+        ],
+        [
+          "scanf",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "sdbm",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "semantic_puppet",
+          "1.0.2",
+          "puppet_gem"
+        ],
+        [
+          "stringio",
+          "0.0.1",
+          "puppet_gem"
+        ],
+        [
+          "strscan",
+          "1.0.0",
+          "puppet_gem"
+        ],
+        [
+          "test-unit",
+          "3.2.7",
+          "puppet_gem"
+        ],
+        [
+          "text",
+          "1.3.1",
+          "puppet_gem"
+        ],
+        [
+          "trollop",
+          "2.1.2",
+          "puppet_gem"
+        ],
+        [
+          "webrick",
+          "1.4.2",
+          "puppet_gem"
+        ],
+        [
+          "win32-dir",
+          "0.4.9",
+          "puppet_gem"
+        ],
+        [
+          "win32-eventlog",
+          "0.6.2",
+          "puppet_gem"
+        ],
+        [
+          "win32-process",
+          "0.7.5",
+          "puppet_gem"
+        ],
+        [
+          "win32-security",
+          "0.2.5",
+          "puppet_gem"
+        ],
+        [
+          "win32-service",
+          "0.8.8",
+          "puppet_gem"
+        ],
+        [
+          "xmlrpc",
+          "0.3.0",
+          "puppet_gem"
+        ],
+        [
+          "zlib",
+          "1.0.0",
+          "puppet_gem"
+        ]
+      ]
+    },
+    "agent_specified_environment": "winprov_master",
+    "aio_agent_build": "6.0.4",
+    "aio_agent_version": "6.0.4",
+    "architecture": "x64",
+    "archive_windir": "C:\\ProgramData\\staging",
+    "choco_install_path": "C:\\ProgramData\\chocolatey",
+    "chocolateyversion": "0.10.8",
+    "common_appdata": "C:\\ProgramData",
+    "dhcp_servers": {
+      "Ethernet0": "10.10.98.243",
+      "system": "10.10.98.243"
+    },
+    "dmi": {
+      "manufacturer": "Phoenix Technologies LTD",
+      "product": {
+        "name": "VMware Virtual Platform",
+        "serial_number": "VMware-42 3c ac 9e 8d c7 a0 33-97 ad 6a f8 7a 22 d1 28",
+        "uuid": "9EAC3C42-C78D-33A0-97AD-6AF87A22D128"
+      }
+    },
+    "domain": "domain.com",
+    "duke_dbtools_db2": false,
+    "duke_dbtools_oracle": false,
+    "duke_dbtools_sql": false,
+    "duke_loc": "lll",
+    "duke_localadministrators": [
+      "Admin2",
+      "PROJECT_ADMIN"
+    ],
+    "duke_os_complete": true,
+    "duke_puppet_confdir": "C:/ProgramData/PuppetLabs/puppet/etc",
+    "duke_puppet_config": "C:/ProgramData/PuppetLabs/puppet/etc/puppet.conf",
+    "duke_scom_regd": "true",
+    "env_allusersprofile": "C:\\ProgramData",
+    "env_appdata": "C:\\Users\\user-nam\\AppData\\Roaming",
+    "env_chocolateyinstall": "C:\\ProgramData\\chocolatey",
+    "env_commonprogramfiles": "C:\\Program Files\\Common Files",
+    "env_commonprogramfiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "env_commonprogramw6432": "C:\\Program Files\\Common Files",
+    "env_computername": "WADCDODRT02",
+    "env_comspec": "C:\\Windows\\system32\\cmd.exe",
+    "env_deflogdir": "C:\\ProgramData\\McAfee\\DesktopProtection",
+    "env_facter_env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+    "env_home": "C:/Users/user-nam",
+    "env_homedrive": "C:",
+    "env_homepath": "\\Users\\user-nam",
+    "env_java_home": "C:\\Program Files\\Amazon Corretto\\jre8",
+    "env_localappdata": "C:\\Users\\user-nam\\AppData\\Local",
+    "env_logonserver": "\\\\CLTNAMDC20",
+    "env_number_of_processors": "8",
+    "env_openssl_conf": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\ssl\\openssl.cnf",
+    "env_os": "Windows_NT",
+    "env_path": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/vendor_ruby/../../../bin;C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/vendor_ruby/../../../../puppet/bin;C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\7-Zip;C:\\Program Files\\Amazon Corretto\\jre8\\bin;C:\\Program Files\\Amazon Corretto\\jre8\\bin\\server;C:\\Users\\user-nam\\AppData\\Local\\Microsoft\\WindowsApps",
+    "env_pathext": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "env_pl_basedir": "C:\\Program Files\\Puppet Labs\\Puppet",
+    "env_processor_architecture": "AMD64",
+    "env_processor_identifier": "Intel64 Family 6 Model 63 Stepping 0, GenuineIntel",
+    "env_processor_level": "6",
+    "env_processor_revision": "3f00",
+    "env_programdata": "C:\\ProgramData",
+    "env_programfiles": "C:\\Program Files",
+    "env_programfiles(x86)": "C:\\Program Files (x86)",
+    "env_programw6432": "C:\\Program Files",
+    "env_prompt": "$P$G",
+    "env_psmodulepath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\PowerShell\\",
+    "env_public": "C:\\Users\\Public",
+    "env_puppet_dir": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet",
+    "env_rubylib": "C:/Program Files/Puppet Labs/Puppet/puppet/lib;",
+    "env_ssl_cert_dir": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\ssl\\certs",
+    "env_ssl_cert_file": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\ssl\\cert.pem",
+    "env_systemdrive": "C:",
+    "env_systemroot": "C:\\Windows",
+    "env_temp": "C:\\Users\\I41466~1\\AppData\\Local\\Temp",
+    "env_temp_variable": "C:\\Users\\I41466~1\\AppData\\Local\\Temp",
+    "env_tmp": "C:\\Users\\I41466~1\\AppData\\Local\\Temp",
+    "env_user": "user-nam",
+    "env_userdnsdomain": "NAM.ENT.DUKE-ENERGY.COM",
+    "env_userdomain": "NAM",
+    "env_userdomain_roamingprofile": "NAM",
+    "env_username": "user-nam",
+    "env_userprofile": "C:\\Users\\user-nam",
+    "env_vsedeflogdir": "C:\\ProgramData\\McAfee\\DesktopProtection",
+    "env_windir": "C:\\Windows",
+    "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+    "facterversion": "3.12.1",
+    "fqdn": "wadcdodrt02.domain.com",
+    "hardwareisa": "x64",
+    "hardwaremodel": "x86_64",
+    "hostname": "wadcdodrt02",
+    "hypervisors": {
+      "vmware": {
+      }
+    },
+    "id": "NAM\\user-nam",
+    "identity": {
+      "privileged": true,
+      "user": "NAM\\user-nam"
+    },
+    "interfaces": "Ethernet0",
+    "ipaddress": "10.10.159.140",
+    "ipaddress_Ethernet0": "10.10.159.140",
+    "is_pe": false,
+    "is_virtual": true,
+    "kernel": "windows",
+    "kernelmajversion": "10.0",
+    "kernelrelease": "10.0.14393",
+    "kernelversion": "10.0.14393",
+    "macaddress": "00:50:56:BC:CA:B8",
+    "macaddress_Ethernet0": "00:50:56:BC:CA:B8",
+    "manufacturer": "Phoenix Technologies LTD",
+    "mco_confdir": "C:/ProgramData/PuppetLabs/mcollective/etc",
+    "memory": {
+      "system": {
+        "available": "123.60 GiB",
+        "available_bytes": 132716687360,
+        "capacity": "3.44%",
+        "total": "128.00 GiB",
+        "total_bytes": 137438347264,
+        "used": "4.40 GiB",
+        "used_bytes": 4721659904
+      }
+    },
+    "memoryfree": "123.60 GiB",
+    "memoryfree_mb": 126568.49609375,
+    "memorysize": "128.00 GiB",
+    "memorysize_mb": 131071.421875,
+    "mtu_Ethernet0": 1500,
+    "netmask": "255.255.255.0",
+    "netmask_Ethernet0": "255.255.255.0",
+    "network": "10.10.159.0",
+    "network_Ethernet0": "10.10.159.0",
+    "networking": {
+      "dhcp": "10.10.98.243",
+      "domain": "domain.com",
+      "fqdn": "wadcdodrt02.domain.com",
+      "hostname": "wadcdodrt02",
+      "interfaces": {
+        "Ethernet0": {
+          "bindings": [
+            {
+              "address": "10.10.159.140",
+              "netmask": "255.255.255.0",
+              "network": "10.10.159.0"
+            }
+          ],
+          "dhcp": "10.10.98.243",
+          "ip": "10.10.159.140",
+          "mac": "00:50:56:BC:CA:B8",
+          "mtu": 1500,
+          "netmask": "255.255.255.0",
+          "network": "10.10.159.0"
+        }
+      },
+      "ip": "10.10.159.140",
+      "mac": "00:50:56:BC:CA:B8",
+      "mtu": 1500,
+      "netmask": "255.255.255.0",
+      "network": "10.10.159.0",
+      "primary": "Ethernet0"
+    },
+    "operatingsystem": "windows",
+    "operatingsystemmajrelease": "2016",
+    "operatingsystemrelease": "2016",
+    "os": {
+      "architecture": "x64",
+      "family": "windows",
+      "hardware": "x86_64",
+      "name": "windows",
+      "release": {
+        "full": "2016",
+        "major": "2016"
+      },
+      "windows": {
+        "system32": "C:\\Windows\\system32"
+      }
+    },
+    "osfamily": "windows",
+    "package_provider": "windows",
+    "path": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/vendor_ruby/../../../bin;C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/vendor_ruby/../../../../puppet/bin;C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\7-Zip;C:\\Program Files\\Amazon Corretto\\jre8\\bin;C:\\Program Files\\Amazon Corretto\\jre8\\bin\\server;C:\\Users\\user-nam\\AppData\\Local\\Microsoft\\WindowsApps",
+    "pe_concat_basedir": "C:/ProgramData/PuppetLabs/puppet/cache/pe_concat",
+    "physicalprocessorcount": 8,
+    "platform_symlink_writable": false,
+    "powershell_version": "5.1.14393.0",
+    "processor0": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor1": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor2": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor3": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor4": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor5": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor6": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processor7": "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+    "processorcount": 8,
+    "processors": {
+      "count": 8,
+      "isa": "x64",
+      "models": [
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz",
+        "Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz"
+      ],
+      "physicalcount": 8
+    },
+    "productname": "VMware Virtual Platform",
+    "puppet_agent_appdata": "C:\\ProgramData",
+    "puppet_agent_pid": 10428,
+    "puppet_client_datadir": "C:/ProgramData/PuppetLabs/puppet/cache/client_data",
+    "puppet_confdir": "C:/ProgramData/PuppetLabs/puppet/etc",
+    "puppet_config": "C:/ProgramData/PuppetLabs/puppet/etc/puppet.conf",
+    "puppet_environmentpath": "C:/ProgramData/PuppetLabs/code/environments",
+    "puppet_files_dir_present": false,
+    "puppet_inventory_metadata": {
+      "packages": {
+        "collection_enabled": true,
+        "last_collection_time": "4.942s"
+      }
+    },
+    "puppet_master_server": "puppetp.duke-energy.com",
+    "puppet_server": "puppetp.duke-energy.com",
+    "puppet_ssldir": "C:/ProgramData/PuppetLabs/puppet/etc/ssl",
+    "puppet_sslpaths": {
+      "privatedir": {
+        "path": "C:/ProgramData/PuppetLabs/puppet/etc/ssl/private",
+        "path_exists": true
+      },
+      "privatekeydir": {
+        "path": "C:/ProgramData/PuppetLabs/puppet/etc/ssl/private_keys",
+        "path_exists": true
+      },
+      "publickeydir": {
+        "path": "C:/ProgramData/PuppetLabs/puppet/etc/ssl/public_keys",
+        "path_exists": true
+      },
+      "certdir": {
+        "path": "C:/ProgramData/PuppetLabs/puppet/etc/ssl/certs",
+        "path_exists": true
+      },
+      "requestdir": {
+        "path": "C:/ProgramData/PuppetLabs/puppet/etc/ssl/certificate_requests",
+        "path_exists": true
+      },
+      "hostcrl": {
+        "path": "C:/ProgramData/PuppetLabs/puppet/etc/ssl/crl.pem",
+        "path_exists": true
+      }
+    },
+    "puppet_stringify_facts": false,
+    "puppet_vardir": "C:/ProgramData/PuppetLabs/puppet/cache",
+    "puppetversion": "6.0.4",
+    "ruby": {
+      "platform": "x64-mingw32",
+      "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.5.0",
+      "version": "2.5.1"
+    },
+    "rubyplatform": "x64-mingw32",
+    "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.5.0",
+    "rubyversion": "2.5.1",
+    "serialnumber": "VMware-42 3c ac 9e 8d c7 a0 33-97 ad 6a f8 7a 22 d1 28",
+    "service_provider": "windows",
+    "staging_http_get": "curl",
+    "system32": "C:\\Windows\\system32",
+    "system_uptime": {
+      "days": 6,
+      "hours": 161,
+      "seconds": 583191,
+      "uptime": "6 days"
+    },
+    "timezone": "Eastern Daylight Time",
+    "uptime": "6 days",
+    "uptime_days": 6,
+    "uptime_hours": 161,
+    "uptime_seconds": 583191,
+    "uuid": "9EAC3C42-C78D-33A0-97AD-6AF87A22D128",
+    "virtual": "vmware",
+    "windows_accounts": {
+      "Administrator": "stn8734",
+      "Guest": "T00000"
+    },
+    "clientcert": "wadcdodrt02.domain.com",
+    "clientversion": "6.0.4",
+    "clientnoop": false
+  },
+  "timestamp": "2019-09-19T11:17:36.308880000-04:00",
+  "expiration": "2019-09-19T11:47:36.309339000-04:00"
+}
