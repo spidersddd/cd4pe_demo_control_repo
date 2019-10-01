@@ -950,6 +950,7 @@
       "uptime": "6 days"
     },
     "timezone": "Eastern Daylight Time",
+    "tpm_version": "TPM not enabled",
     "uptime": "6 days",
     "uptime_days": 6,
     "uptime_hours": 161,
@@ -960,6 +961,7 @@
       "Administrator": "stn8734",
       "Guest": "T00000"
     },
+    "windows_type": "4",
     "clientcert": "wadcdodrt02.domain.com",
     "clientversion": "6.0.4",
     "clientnoop": false

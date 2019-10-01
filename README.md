@@ -6,20 +6,22 @@
 
 ## What You Get From This Demo control-repo
 
-This is a demo control repository that has working Roles (example\_role) and Profile code.  It is intended to demo what guidelines should be used to create role and profile, how they interact with other Puppet systems and explain some of the concepts behind the process.
+This is a demo control repository that has working Roles (example\_role) and Profile (profile) code.  It is intended to demo what guidelines should be used to create roles and profiles, how they interact with other Puppet abastraction and explain some of the concepts behind the process.
 
 The important files and items in this template are as follows:
 
-* Basic example of roles (example\_role) and profiles.
-* An example Puppetfile with various module references.
-* An example Hiera configuration file and data directory with pre-created common.yaml and nodes directory.
-* An [environment.conf](https://puppet.com/docs/puppet/5.3/config_file_environment.html) that correctly implements:
+* Basic example of roles (./site/example\_role) and profiles (./site/profile).
+* An example Puppetfile (Puppetfile) with various module references.
+* An example Hiera configuration file (heira.yaml) and data directory (data) with example yaml files, nodes, and roles directory.
+* An [environment.conf](https://puppet.com/docs/puppet/5.3/config_file_environment.html) that implements:
   * A site directory for roles, profiles, and any custom modules for your organization.
   * A config\_version script.
-* An example [config\_version](https://puppet.com/docs/puppet/5.3/config_file_environment.html#configversion) script that outputs:
+* An example [config\_version](https://puppet.com/docs/puppet/5.3/config_file_environment.html#configversion) (./scripts/config_version.sh) script that outputs:
   * Hostname of the master the catalog was compiled on
   * Puppet Environment the catalog was compiled from
   * git commit ID of the code that was used during a Puppet run.
+ 
+  **Example: `compiler01-development-3a9e6b2537b5f`**
 
 Here's a visual representation of the structure of this repository:
 
@@ -60,3 +62,24 @@ Here's a visual representation of the structure of this repository:
 | |___ os                                 # OS family specific data
 ```
 
+## Roles and Profiles Triangle
+
+Bellow are the best practice guidelines used in the creation of this control-repo.
+
+  - Role Guidelines
+     - One role is assigned to a host.
+     - Roles can be `classification-groups` in the PE console or classifier, or written in code as exampled here.
+     - Roles only include profile classes.
+     - Roles only have `include`'s and possibly ordering for the profiles.
+     - Only one role is assined to a host agent.  If more than one role is required to build a host (agent) then a new role should be created for said agent.
+     - Naming of Roles should be base on product or what the host (agent) will be providing for the company/organization. 
+  - Profiles layer is customer wrapper modules.
+     - Profiles include component class.
+     - Profiles should have little or no resource definitions.
+     - Profiles can include other profiles.
+     - Profiles should be named after the technoligy they are enforcing.
+     - One base profile should be created supporting all organizationally suppored operating systems.  This profile should be the base configuration of the allowable organizational security and hardening configurations.
+     - Profiles can be parameterized.
+     - Profiles get data from hiera or through the classification tool (PE console).
+  
+  ![](jpgs/Role_Profile_triangle.jpg)

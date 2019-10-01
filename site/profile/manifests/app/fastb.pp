@@ -11,9 +11,15 @@ class profile::app::fastb (
   $catalina_home = $profile::app::tomcat::webserver::tomcat_install_path
 
   tomcat::war { 'http-demo.war':
-    war_source => $download_url,
-    user       => $user,
-    group      => $group,
+    war_source    => $download_url,
+    user          => $user,
+    catalina_base => $catalina_home,
+    group         => $group,
+  }
+
+  tomcat::instance { "${trusted['extensions']['pp_role']}-${trusted['extensions']['pp_preshared_key']}":
+    catalina_home => $catalina_home,
+    catalina_base => "${catalina_home}/http-demo",
   }
 
   $mysql_passwd = lookup( "profile::app::fastb::fastb_db_password::${trusted['extensions']['pp_preshared_key']}", String,
@@ -27,5 +33,9 @@ class profile::app::fastb (
     grant    => [ 'SELECT', 'UPDATE' ],
     tag      => $trusted['extensions']['pp_preshared_key'],
   }
-}
 
+  profile::app::haproxy::balancer_member { $trusted['extensions']['pp_role']:
+    service_name => $trusted['extensions']['pp_preshared_key'],
+    port         => 8080,
+  }
+}
