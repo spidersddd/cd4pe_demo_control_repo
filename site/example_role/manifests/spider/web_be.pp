@@ -1,5 +1,5 @@
 # This is an example of a product called
-# "Fast B" 
+# "Spider" 
 # This is a web backend for that product.
 class example_role::spider::web_be {
   include profile::os::baseline

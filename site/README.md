@@ -13,6 +13,7 @@ These examples have been constructed with the following requirements:
 |--------------------------|---------------------|-----|
 | CentOS 7 | example\_role::fastb::web\_be | Complete |
 | CentOS 7 | example\_role::fastb::database | Complete |
+| CentOS 7 | example\_role::fastb::loadbalancer | Complete |
 | Windows 2012R2 | example\_role::spiders::web\_be | To be done |
 
 

@@ -200,10 +200,21 @@ profile::os::baseline::verify_trusted_data::extentions:
 
 profile::app::fastb::fastb_db_password::iETraGpZcnRcPiuZGPCytoq3eWkwaWC6vqzudJkvPmu2: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAHPuFhkR38VKbQ76hhp5wWkjuD90sOMXSnw8bbQjU29abIChXtSTll1MZv1iWr2d5BHX1a/E/8cmJxZpc+GXjiV0YXnMHODAOCc+I4QWYmBBKUsUC9N2x6kIYoTAOupOWMnsCOxgyWea9+aWaNsuchg+cRmgQqgo9Ry3nuiEbdD7YHpywRElG4CbTUAMOEJEHexxW54B4svzUFklTNDFRsyura3qkyZLQzf/3rB8WrMKKrbM5vcNg0p0Y8LLp9KYRR13jBmsQ1FawhbS3BIz2f6mHjQrW/DnFxRCi+9fNd8yMHmWM2tAcXyjMdHs3dau41t+9APKuqOWjG3KlV3lGXzA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAZ3nrbPxeAmXguU6LfmXzbgBDo/PVHoLJxFfpwp+VMjXId]
 
-secure_windows::stig::v73223::enforced: false
-secure_windows::stig::v73225::enforced: false
-secure_windows::stig::v73235::enforced: false
-secure_windows::stig::v73237::enforced: false
+profile::app::haproxy::server::fastb_loadbalancer::iETraGpZcnRcPiuZGPCytoq3eWkwaWC6vqzudJkvPmu2:
+  iETraGpZcnRcPiuZGPCytoq3eWkwaWC6vqzudJkvPmu2:
+    ports: '80'
+    mode: 'http'
+    
+# This test data for onceover to compile with 
+profile::app::haproxy::server::agent::somekey:
+  somekey:
+    ports: '80'
+    mode: 'http'
+
+secure_windows::stig::v73223::enforced: true
+secure_windows::stig::v73225::enforced: true
+secure_windows::stig::v73235::enforced: true
+secure_windows::stig::v73237::enforced: true
 secure_windows::stig::v73239::enforced: false
 secure_windows::stig::v73249::enforced: false
 secure_windows::stig::v73251::enforced: false
