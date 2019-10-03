@@ -73,7 +73,7 @@ Bellow are the best practice guidelines used in the creation of this control-rep
      - Roles only have `include`'s and possibly ordering for the profiles.
      - Only one role is assined to a host agent.  If more than one role is required to build a host (agent) then a new role should be created for said agent.
      - Naming of Roles should be base on product or what the host (agent) will be providing for the company/organization. 
-  - Profiles layer is customer wrapper modules.
+  - Profile layer is customer wrapper modules.
      - Profiles include component class.
      - Profiles should have little or no resource definitions.
      - Profiles can include other profiles.
