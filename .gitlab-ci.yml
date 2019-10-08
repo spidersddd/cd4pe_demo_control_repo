@@ -30,4 +30,6 @@ parallel_onceover-Ruby 2.4.4-Puppet ~> 5.5:
     - bundle exec onceover run spec
   variables:
     PUPPET_GEM_VERSION: '~> 5.5'
+  only:
+    - merge_requests
 
