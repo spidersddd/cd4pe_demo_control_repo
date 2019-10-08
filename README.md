@@ -10,11 +10,11 @@ This is a demo control repository that has working Roles (example\_role) and Pro
 
 The important files and items in this template are as follows:
 
-* Basic example of roles (./site/example\_role) and profiles (./site/profile).
+* Basic example of roles (./site-modules/example\_role) and profiles (./site-modules/profile).
 * An example Puppetfile (Puppetfile) with various module references.
 * An example Hiera configuration file (heira.yaml) and data directory (data) with example yaml files, nodes, and roles directory.
 * An [environment.conf](https://puppet.com/docs/puppet/5.3/config_file_environment.html) that implements:
-  * A site directory for roles, profiles, and any custom modules for your organization.
+  * A site-modules directory for roles, profiles, and any custom modules for your organization.
   * A config\_version script.
 * An example [config\_version](https://puppet.com/docs/puppet/5.3/config_file_environment.html#configversion) (./scripts/config_version.sh) script that outputs:
   * Hostname of the master the catalog was compiled on
@@ -41,7 +41,7 @@ Here's a visual representation of the structure of this repository:
 | |___ config_version.rb                  # A config_version script for r10k.
 | |___ code_manager_config_version.rb     # A config_version script for Code Manager.
 | |___ config_version.sh                  # A wrapper that chooses the appropriate config_version script.
-|___ site                                 # This directory contains site-specific modules and is added to $modulepath.
+|___ site-modules                         # This directory contains site-specific modules and is added to $modulepath.
 | |___ README.md
 | |___ profile                            # The profile module.
 | | |___ README.md
