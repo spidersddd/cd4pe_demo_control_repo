@@ -1,7 +1,7 @@
 forge "http://forge.puppetlabs.com"
 
 mod "puppetlabs/inifile",                '1.6.0'
-mod 'puppetlabs-stdlib',                 '4.24.0'
+mod 'puppetlabs-stdlib',                 '4.25.1'
 mod 'puppetlabs-tomcat',                 '2.4.0'
 mod 'puppetlabs-java',                   '3.2.0'
 mod 'puppetlabs-chocolatey',             '3.1.0'
@@ -47,3 +47,11 @@ mod 'puppetlabs-haproxy',                 '4.0.0'
 
 #mod 'tomcat',
 #  git: 'https://github.com/spidersddd/puppetlabs-tomcat'
+
+# CD4PE
+mod 'puppetlabs-cd4pe',                '1.4.0'
+# Requirements for cd4pe
+mod 'puppetlabs-hocon',                '1.0.1'
+mod 'puppetlabs-puppet_authorization', '0.5.0'
+mod 'puppetlabs-docker',               '3.3.0'
+mod 'puppetlabs-apt',                  '6.2.1'
