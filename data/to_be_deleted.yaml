@@ -180,6 +180,7 @@ profile::app::puppet::compiler::ssh_public_key_content: >
 profile::os::baseline::name_servers: [ '192.168.0.10', '192.168.0.7' ]
 profile::os::baseline::search_path: [ 'platform9.puppet.net' ]
 
+profile::os::baseline::banner::windows_motd_title: 'Legal Notice'
 profile::os::baseline::banner::motd: "------------- \n
 W A R N I N G \n
 ------------- \n
