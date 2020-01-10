@@ -187,7 +187,7 @@ W A R N I N G \n
 \n
 Authorized users only. All activity may be monitored and logged. Use of \n
 this system means you consent to such monitoring. Unauthorized users may \n
-be prosecuted.\n"
+be prosecuted.    \n"
 
 profile::app::mysql::server::settings:
     remove_default_accounts: true
